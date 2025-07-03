@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes da Ocorrência</title>
+    <link rel="icon" href="images/Icone.jpg" type="Icone.jpg">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <style>
+    body {
+        background-color: #111;
+        color: #f4f4f4;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: auto;
+        padding: 20px;
+    }
+
+    button {
+        background-color: #f4c542;
+        color: #000;
+        border: none;
+        padding: 10px 20px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        background-color: #e0b52d;
+    }
+</style>
+
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="Logo BeeMyWay" class="logo-left">
+            <div class="header-center">
+                <h1>BeeMyWay</h1>
+                <p>Encontre a melhor rota para seus deslocamentos</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+    <div class="container">
+        <h1 id="titulo"></h1>
+        <p id="descricao"></p>
+        <p><strong>Local:</strong> <span id="local"></span></p>
+        <p><strong>Data:</strong> <span id="data"></span></p>
+        <button onclick="abrirMapa()">Ver no Mapa</button>
+    </div>
+    <div id="map" style="height: 400px; margin: 20px auto;"></div>
+</main>
+
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Mobilidade Urbana - Todos os direitos reservados</p>
+            <p>Desenvolvido para melhorar seus deslocamentos diários</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="assets/scripts/detalhes.js"></script>
+</body>
+</html>

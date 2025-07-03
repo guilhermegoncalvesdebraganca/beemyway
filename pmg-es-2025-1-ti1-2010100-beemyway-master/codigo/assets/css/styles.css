@@ -1,0 +1,373 @@
+:root {
+    --primary-color: var(--button-hover); 
+    --secondary-color: #282626;
+    --text-color: ;
+    --light-text: #777;
+    --button-hover: #f9c53c; 
+}
+
+body {
+    background-color: #000000;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--text-color);
+}
+
+header {
+    width: 100%;
+    background-color: var(--button-hover); 
+    color: rgb(0, 0, 0);
+    padding: 20px 15px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-style: italic;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+#map-container {
+    width: 85%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    z-index: 0;
+}
+
+.controls {
+    color:#f7e162;;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 85%;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.input-group label {
+    min-width: 120px;
+    font-weight: bold;
+}
+
+.input-group input {
+    flex: 3;
+    min-width: 250px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+button , .rotasFavoritas {
+    background-color: var(--primary-color);
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95em;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover);
+}
+
+button.secondary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    border: 1px solid #ddd;
+}
+
+button.secondary:hover {
+    background-color: #e1e1e1;
+}
+
+.status {
+    padding: 12px;
+    color: #f7e162;
+    background-color: #302d2d;
+    text-align: center;
+    font-style: italic;
+    border-radius: 4px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 1200px;
+}
+
+footer {
+    background-color: #302d2d; 
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+footer p:first-child {
+    font-weight: bold;
+}
+
+/* Estilos para os marcadores */
+.leaflet-marker-icon {
+    filter: hue-rotate(220deg);
+}
+
+.start-marker {
+    filter: hue-rotate(120deg);
+}
+
+.rotasFavoritas {
+    text-decoration: none;
+}
+
+
+.occurrences-container {
+    width: 85%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #302d2d;
+    border-radius: 8px;
+    color: #f7e162;
+    margin-top: 30px;
+}
+
+.occurrences-container h2 {
+    margin-top: 0;
+    border-bottom: 1px solid #f7e162;
+    padding-bottom: 10px;
+}
+
+.occurrence-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.occurrence-filters input,
+.occurrence-filters select {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.occurrences-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.occurrence-item {
+    background-color: #3a3636;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.occurrence-item:hover {
+    transform: translateX(5px);
+}
+
+.occurrence-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.occurrence-title {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.occurrence-type {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    background-color: #f7e162;
+    color: #000;
+}
+
+.occurrence-details {
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.occurrence-date {
+    color: #aaa;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+header {
+    background-color: var(--button-hover);
+    color: #171717;
+    padding: 20px 15px;
+    text-align: center;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px;
+}
+.logo-left {
+    height: 110px;
+    width: auto;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Cores para diferentes tipos de ocorrências */
+.type-bicicleta {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.type-carro {
+    background-color: #2196F3;
+    color: white;
+}
+
+.type-acidente {
+    background-color: #f44336;
+    color: white;
+}
+
+.type-obras {
+    background-color: #FF9800;
+    color: white;
+}
+
+.rotasFavoritas {
+    margin-left: 350px;
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    main {
+        padding-top: 15px;
+        align-items: center;
+    }
+
+    .header-content {
+        align-items: center;
+    }
+
+    .rotasFavoritas , .shareRouteBtn {
+        position: static;
+        left: 20px;
+        margin-left: 0;
+    }
+
+    .calculateRoute {
+        padding: 10px;
+        font-size: 0.9em;  
+        margin-top: 10px;
+        border: 100px;
+    }
+
+    .logo-left {
+        position: static;
+        transform: none;
+        margin-bottom: 5px;
+        height: 50px;
+    }
+
+    #map-container, .controls {
+        width: 95%;
+        padding: 0;
+    }
+    
+    .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .input-group input {
+        width: 100%;
+    }
+    
+    #map {
+        height: 350px;
+        margin-left: 20px;
+    }
+    #map-container {
+        margin: 10px;
+    }
+    
+    .occurrences-container {
+        margin-left: 47px;
+    }
+ 
+    footer {
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .occurrences-container {
+        margin-left: 17px;
+    }
+}

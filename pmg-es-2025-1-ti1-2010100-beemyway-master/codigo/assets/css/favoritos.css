@@ -1,0 +1,105 @@
+body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    color: white;
+}
+
+.favoritos-container {
+    width: 85%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.favorito-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #444;
+}
+
+.route-card {
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 8px;
+    margin: 50px;
+    padding: 20px;
+    background-color: #302d2d;
+}
+
+.tag {
+    font-weight: bold;
+    color: white;
+}
+
+.endereco {
+    color: white;
+    font-size: 16px;
+    margin-left: 10px;
+    text-align: center;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
+}
+
+.nenhumaRota {
+    text-align: center;
+    color: #f7e162;
+    font-size: 1.2em;
+    margin-top: 35px;
+}
+
+.voltar {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-left: 80vw;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .favoritos-container {
+        width: 98%;
+        margin: 10px auto;
+        padding: 2vw;
+    }
+
+    .route-card {
+        flex-direction: column;
+        margin: 15px ;
+        margin-left: 30px;
+        padding: 12px;
+        align-items: flex-start;
+    }
+
+    .endereco {
+        margin-left: 0;
+        text-align: left;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .voltar {
+        display: block;
+        margin-left: 0;
+        width: 50px;
+        position: relative;
+        left: 70px;
+        top: 10px;
+    }
+}

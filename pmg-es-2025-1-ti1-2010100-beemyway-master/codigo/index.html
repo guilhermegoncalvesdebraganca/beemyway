@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR" >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeMyWay</title>
+    <link rel="icon" href="images/Icone.jpg" type="Icone.jpg">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="images/logo.png" alt="Logo BeeMyWay" class="logo-left">
+            <div class="header-center">
+                <h1>BeeMyWay</h1>
+                <p>Encontre a melhor rota para seus deslocamentos</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="controls">
+            <div class="input-group">
+                <label for="startPoint">Ponto de Partida:</label>
+                <input type="text" id="startPoint" placeholder="Digite um endereço ou local">
+                <button id="searchStartPoint">Buscar</button>
+                <button id="setStartOnMap" class="secondary">Definir no Mapa</button>
+                <button id="useMyLocation" class="secondary">Usar Minha Localização</button>
+            </div>
+            <div class="input-group">
+                <label for="destination">Destino:</label>
+                <input type="text" id="destination" placeholder="Digite um endereço ou local">
+                <button id="searchDestination">Buscar</button>
+                <button id="setDestOnMap" class="secondary">Definir no Mapa</button>
+            </div>
+            <div class="button-group">
+                <button id="calculateRoute">Calcular Rota</button>
+                <button id="clearRoute" class="secondary">Limpar Tudo</button>
+                <button id="favoriteRouteBtn">Favoritar Rota</button>
+            </div>
+        </div>
+
+        <div class="status" id="status">
+            Defina o ponto de partida e o destino para calcular a rota
+        </div>
+
+        <div style="text-align: center;">
+            <label for="destination">Meio de locomoção:</label><br>
+            <button class="calculateRoute" onclick="window.location.href='index.html?id=bike'">Bicicleta</button>
+            <button class="calculateRoute" onclick="window.location.href='index.html?id=car'">Carro</button>
+            <button class="calculateRoute" onclick="window.location.href='index.html?id=motocycle'">Moto</button>
+            <button class="calculateRoute" onclick="window.location.href='index.html?id=foot'">Caminhada</button>
+            <button class="calculateRoute" onclick="window.location.href='index.html?id=bus'">Ônibus</button>
+            <button class="calculateRoute" onclick="window.location.href='index.html?id=train'">Metrô</button>
+            <a class="rotasFavoritas" href="favoritos.html" class="secondary">Rotas Favoritas</a>
+             <!-- Guilherme Botão para compartilhar rota -->
+                <button id="shareRouteBtn" onclick="window.location.href='compartilhamento.html?id=${}'">Compartilhar Rota</button>
+ 
+        </div>
+
+        <div id="map-container">
+            <div id="map"></div>
+
+            <!--Caio Exibir ocorrências em "lista"-->
+            <div class="occurrences-container">
+                <h2>Lista de Ocorrências</h2>
+                <div class="occurrence-filters">
+                    <input type="text" id="searchOccurrences" placeholder="Filtrar ocorrências...">
+                    <select id="filterType">
+                        <option value="all">Todas</option>
+                        <option value="bicicleta">Bicicleta</option>
+                        <option value="carro">Carro</option>
+                        <option value="acidente">Acidente</option>
+                        <option value="obras">Obras</option>
+                    </select>
+                </div>
+                <ul id="occurrencesList" class="occurrences-list">
+                </ul>
+                <!--Final Ocorrências em lista!-->
+
+            </div>
+
+
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Mobilidade Urbana - Todos os direitos reservados</p>
+            <p>Desenvolvido para melhorar seus deslocamentos diários</p>
+        </div>
+    </footer>
+
+    <script src="assets/scripts/script.js"></script>
+</body>
+
+</html>

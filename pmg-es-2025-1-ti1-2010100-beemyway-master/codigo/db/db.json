@@ -1,0 +1,11 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "login": "laral",
+            "senha": "1234",
+            "email": "lalalara@gmail.com",
+            "logado": true
+        }
+    ]
+}

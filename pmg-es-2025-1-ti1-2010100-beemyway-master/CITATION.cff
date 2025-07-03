@@ -1,0 +1,31 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Mobilidade Urbana- BeeMyWay
+authors:
+  - family-names: Martins Santos Silva
+    given-names: Caio
+  - family-names: Lage Braga
+    given-names: Davi
+  - family-names: Gonçalves de Bragança
+    given-names: Guilherme
+  - family-names: Lima de Andrade
+    given-names: João Pedro
+  - family-names: de Almeida Delgado
+    given-names: Luiz Paulo
+  - family-names: Noronha Lara
+    given-names: Laura
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Silva Tavares
+    given-names: Cleiton 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Lacerda Marques
+    given-names: Ramon 
+keywords:
+  - web app
+  - mobilidade urbana
+repository-code: https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2025-1-ti1-2010100-beemyway
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2022-07-14
